@@ -1,0 +1,204 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+.container {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border: 2px solid;
+	background: #9602a3;
+}
+.header {
+	background: #111111;
+	display: flex;
+	margin: auto;
+	padding: 6px;
+	justify-content: center;
+}
+.header h2 {font-family: monospace; color: #dfdfdf;}
+.main {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	background: rgba(0,0,0,.3);
+}
+.sub-word-details {
+	position: relative;
+	background: #141414;
+	width: 100%;
+	height: 160px;
+	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sub-word-details legend {
+	position: absolute;
+	width: 25%;
+	bottom: 0;
+	left: 50%;
+	transform: translate(50%, 50%);
+}
+.words-copy, .words-delete {
+	width: 40px;
+	height: 40px;
+	display: inline-grid;
+	place-items: center;
+	background: #111;
+	color: #dfdfdf;
+	border: 0;
+	border-radius: 1vh;
+	cursor: pointer;
+	user-select: none;
+}
+.words-copy:active {background: #323;}
+.words-delete:active {background: #323;}
+.words-delete{float: right;}
+.sub-word-details legend i {color: skyblue; font-size: 1em;}
+.sub-word-details legend p {font-size: 1vh; font-family: bariol;}
+.word-details {
+	width: 300px;
+	height: 125px;
+	background: #324;
+	margin: 0;
+	border-radius: 2vh 0vh 2vh 0vh;
+	padding: 1vh;
+}
+.word-details th {
+	text-align: left;
+	font-family: bariol;
+	font-size: 3vh;
+	color: #dedede;
+}
+.word-details td {
+	font-family: bariol;
+	padding: 2px;
+	font-size: 2vh;
+	color: #dedede;
+}
+.word-details td p {font-weight: bold;}
+.word-details sup {font-size: 1vh;}
+.word-details button {
+	display: grid;
+	place-items: center;
+	width: 1em;
+	height: 1em;
+	background: lime;
+	border: 0;
+	border-radius: 50%;
+}
+.main-content {
+	position: relative;
+	margin: 0 auto;
+	background: #191919;
+	width: 285px;
+	height: 260px;
+	border: 0;
+	border-radius: 2vh;
+}
+.main-text {
+	display: grid;
+	place-items: center;
+	margin: auto;
+}
+.main-content textarea {
+	margin: 1em;
+	padding: 1vh;
+	resize: none;
+	border: 0;
+	border-radius: 2vh;
+	width: 265px;
+	height: 215px;
+	background: #282828;
+	color: #fdfdfd;
+}
+.main-content textarea::placeholder {font-style: italic;}
+.main-content legend {
+	position: absolute;
+	width: 50%;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+.w-count, .c-count {
+	display: inline-grid;
+	place-items: center;
+	width: 60px;
+	height: 50px;
+	background: #141414;
+	color: #dfdfdf;
+	border-radius: 6px;
+	box-shadow: 0px 3px 3px black;
+}
+.main-content .c-count {float: right;}
+.main-content legend h5 {
+	font-size: 3.5vh;
+	filter: drop-shadow(0px 1px 1px cyan);
+	animation: fade-drop-shd 3s ease infinite;
+}
+.main-content legend p {font-size: 0.6em; font-family: bariol;}
+.p-info {display: flex; justify-content: center;}
+.sub-info {
+	display: grid;
+	place-items: center;
+	margin: 0 auto;
+	width: 5vh;
+	height: 5vh;
+	border-radius: 50%;
+	background: skyblue;
+	box-shadow: 0px 2px 3px black;
+	color: #dfdfdf;
+	cursor: pointer;
+	
+}
+.sub-info i {font-size: 4.5vh; color: #313;}
+.sub-info:hover {background: #080069;}
+.sub-info i:hover {color: skyblue;}
+.sub-info p {
+	font-size: 2vh; text-align: center;}
+#info {
+	position: fixed;
+	display: none;
+	width: 320px;
+	height: 10.5em;
+	margin-top: 1vh;
+	border-radius: 8px;
+	padding: 1vh;
+	background: rgba(1,2,1,.6);
+	color: #dfd;
+	z-index: 5;
+	box-shadow: 0px 3px 3px skyblue;
+	animation: fade 500ms ease;
+}
+#info p {font-size: 10px;}
+#info li {font-size: 9px; list-style-position: inside;}
+#info hr {
+	margin: 3px 0px;
+	border: 0.5px solid #dfd;
+	border-radius: 3px;
+}
+#info #author {font-size: 1vh;}
+.sub-alert-box {display: flex; justify-content: center;}
+#alert-box {
+	display: none;
+	place-items: center;
+	width: 6em;
+	border: 0;
+	border-radius: 1vh;
+	height: 1.5em;
+	background: #113;
+	color: #dfd;
+}
+#alert-box p {font-family: arial; font-size: 2vh;}
+@font-face {
+	font-family: bariol;
+	src: url('bariol.otf');
+}
+@keyframes fade {from{opacity: 0;}to{opacity: 1;}}
+@keyframes fade-drop-shd {
+	0%{filter: drop-shadow(0px 2px 3px skyblue);}
+	50%{filter: none;}
+	100%{filter: drop-shadow(0px 2px 3px skyblue);}
+}

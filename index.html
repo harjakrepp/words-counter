@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Words Counter</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/70d817bde9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>Words Counter</h2>
+		</div>
+		<hr />
+		<div class="p-info">
+		<div id="info">
+			<h4>Information</h4>
+			<p>
+				Hi, there.<br />
+				This website is an application to help you
+				solve a small problems. If you have a task to
+				count each paragraph, word, or characters,
+				from a hundreds or even thousands of
+				words, here is the solution. here you can
+				write or paste your text and easily count the
+				number of words from the many words.
+			</p>
+			<br />
+			<h6>Upcoming Features</h6>
+			<ul>
+				<li>add selected text background color</li>
+				<li>add message alert box</li>
+				<li>etc.</li>
+			</ul>
+			<hr/>
+			<h6 id="author">Created by : Harjakrepp</h6>
+		</div>
+		</div>
+		<div class="main">
+			<fieldset class="sub-word-details">
+				<div class="word-details">
+					<table >
+						<tr>
+							<th colspan="4">Details</th>
+						</tr>
+						<tr>
+							<td>Paragraph</td>
+							<td>:</td>
+							<td><p id="paragraph-count">0</p></td>
+							<td><button id="paragraph-btn"></button></td>
+						</tr>
+						<tr>
+							<td>Word</td>
+							<td>:</td>
+							<td><p id="d-words-count">0</p></td>
+							<td><button id="word-btn"></button></td>
+						</tr>
+						<tr>
+							<td>All Characters</td>
+							<td>:</td>
+							<td><p id="d-chars-count">0</p></td>
+							<td><button id="allchar-btn"></button></td>
+						</tr>
+						<tr>
+							<td>Characters <sup>(without space)</sup></td>
+							<td>:</td>
+							<td><p id="ws-chars-count">0</p></td>
+							<td><button id="wschar-btn"></button></td>
+						</tr>
+					</table>
+				</div>
+				<legend>
+					<div class="words-copy" id="copy" onclick="copyText()">
+						<i class="fa-regular fa-copy"></i>
+						<p>Copy</p>
+					</div>
+					<div class="words-delete" id="delete" onclick="clearText()">
+						<i class="fa-solid fa-trash-can" style="color: red"></i>
+						<p>Clear</p>
+					</div>
+				</legend>
+			</fieldset>
+			<fieldset class="main-content">
+				<div class="main-text">
+					<textarea id="input-area" placeholder="type your words in here ..."></textarea>
+				</div>
+				<legend>
+					<div class="w-count">
+						<h5 id="words-count">0</h5>
+						<p>Words</p>
+					</div>
+					<div class="c-count">
+						<h5 id="chars-count">0</h5>
+						<p>Characters</p>
+					</div>
+				</legend>
+			</fieldset>
+			<div class="sub-info" onclick="showinfo()">
+				<i class="fa-solid fa-circle-question"></i>
+			</div>
+			<div class="sub-alert-box">
+				<div id="alert-box">
+					<p id="alertText">welcome</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="script.js"></script>
+</html>
